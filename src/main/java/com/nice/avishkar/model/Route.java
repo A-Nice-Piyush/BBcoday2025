@@ -16,6 +16,9 @@ public class Route {
     String departureTime;
     @CsvBindByName(column = "ArrivalTime")
     String arrivalTime;
+    @CsvBindByName(column = "Cost")
+    Integer cost;
+    
     public Route()
     {
 
@@ -67,6 +70,14 @@ public class Route {
 
     public void setArrivalTime(String arrivalTime) {
         this.arrivalTime = arrivalTime;
+    }
+
+    public Integer getCost() {
+        return cost;
+    }
+
+    public void setCost(Integer cost) {
+        this.cost = cost;
     }
 
     @Override
