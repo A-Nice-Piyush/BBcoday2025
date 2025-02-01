@@ -1,4 +1,4 @@
-package com.nice.avishkar;
+package com.nice.avishkar.interfaces;
 
 import com.nice.avishkar.model.OptimalTravelSchedule;
 import com.nice.avishkar.dao.ResourceInfo;

@@ -88,6 +88,7 @@ public class Route {
                 ", mode='" + mode + '\'' +
                 ", departureTime='" + departureTime + '\'' +
                 ", arrivalTime='" + arrivalTime + '\'' +
+                ", cost='" + cost + '\'' +
                 '}';
     }
 }
