@@ -56,7 +56,7 @@ public class TravelOptimizerTest {
 
         Assert.assertNotNull(result);
 
-        /*ssert.assertEquals(1, result.get("1").getValue());
+        Assert.assertEquals(1, result.get("1").getValue());
         Assert.assertEquals("hops", result.get("1").getCriteria().toLowerCase());
 
         Assert.assertEquals(40, result.get("5").getValue());
@@ -68,7 +68,7 @@ public class TravelOptimizerTest {
         Assert.assertEquals("E6AEDC", result.get("4").getRoutes().get(0).getSource());
         Assert.assertEquals("800878", result.get("4").getRoutes().get(0).getDestination());
         Assert.assertEquals("18:25", result.get("4").getRoutes().get(0).getDepartureTime());
-        Assert.assertEquals("19:30", result.get("4").getRoutes().get(0).getArrivalTime());*/
+        Assert.assertEquals("19:30", result.get("4").getRoutes().get(0).getArrivalTime());
 
 
     }
@@ -92,13 +92,13 @@ public class TravelOptimizerTest {
         Assert.assertEquals(540, result.get("13").getValue());
         Assert.assertEquals("cost", result.get("13").getCriteria().toLowerCase());
 
-        /*Assert.assertEquals(1, result.get("7").getValue());
+        Assert.assertEquals(1, result.get("7").getValue());
         Assert.assertEquals("hops", result.get("7").getCriteria().toLowerCase());
 
         Assert.assertEquals("CACE5F", result.get("18").getRoutes().get(0).getSource());
         Assert.assertEquals("7B1858", result.get("18").getRoutes().get(0).getDestination());
         Assert.assertEquals("20:30", result.get("18").getRoutes().get(0).getDepartureTime());
-        Assert.assertEquals("21:25", result.get("18").getRoutes().get(0).getArrivalTime());*/
+        Assert.assertEquals("21:25", result.get("18").getRoutes().get(0).getArrivalTime());
 
     }
 
@@ -115,8 +115,8 @@ public class TravelOptimizerTest {
 
         Assert.assertNotNull(result);
 
-        /*Assert.assertEquals(1, result.get("800").getValue());
-        Assert.assertEquals("hops", result.get("800").getCriteria().toLowerCase());*/
+        Assert.assertEquals(1, result.get("800").getValue());
+        Assert.assertEquals("hops", result.get("800").getCriteria().toLowerCase());
 
         Assert.assertEquals(50, result.get("626").getValue());
         Assert.assertEquals("cost", result.get("626").getCriteria().toLowerCase());
@@ -144,13 +144,13 @@ public class TravelOptimizerTest {
         Assert.assertEquals(160, result.get("9357").getValue());
         Assert.assertEquals("cost", result.get("9357").getCriteria().toLowerCase());
 
-        /*Assert.assertEquals(1, result.get("14962").getValue());
+        Assert.assertEquals(1, result.get("14962").getValue());
         Assert.assertEquals("hops", result.get("14962").getCriteria().toLowerCase());
 
         Assert.assertEquals("069782", result.get("9402").getRoutes().get(1).getSource());
         Assert.assertEquals("180AD5", result.get("9402").getRoutes().get(1).getDestination());
         Assert.assertEquals("12:55", result.get("9402").getRoutes().get(1).getDepartureTime());
-        Assert.assertEquals("15:45", result.get("9402").getRoutes().get(1).getArrivalTime());*/
+        Assert.assertEquals("15:45", result.get("9402").getRoutes().get(1).getArrivalTime());
 
     }
 
@@ -166,13 +166,12 @@ public class TravelOptimizerTest {
         Map<String, OptimalTravelSchedule> result = analyzer.getOptimalTravelOptions(resourceInfo);
 
         Assert.assertNotNull(result);
-
-        /*Assert.assertEquals("4E4594", result.get("13400").getRoutes().get(0).getSource());
+        Assert.assertEquals("4E4594", result.get("13400").getRoutes().get(0).getSource());
         Assert.assertEquals("245447", result.get("13400").getRoutes().get(0).getDestination());
         Assert.assertEquals("03:15", result.get("13400").getRoutes().get(0).getDepartureTime());
         Assert.assertEquals("05:00", result.get("13400").getRoutes().get(0).getArrivalTime());
         Assert.assertEquals(105, result.get("13400").getValue());
-        Assert.assertEquals("time", result.get("13400").getCriteria().toLowerCase());*/
+        Assert.assertEquals("time", result.get("13400").getCriteria().toLowerCase());
 
         Assert.assertEquals(170, result.get("21344").getValue());
         Assert.assertEquals("cost", result.get("21344").getCriteria().toLowerCase());
@@ -180,8 +179,8 @@ public class TravelOptimizerTest {
         Assert.assertEquals(210, result.get("711").getValue());
         Assert.assertEquals("cost", result.get("711").getCriteria().toLowerCase());
 
-        /*Assert.assertEquals(1, result.get("24974").getValue());
-        Assert.assertEquals("hops", result.get("24974").getCriteria().toLowerCase());*/
+        Assert.assertEquals(1, result.get("24974").getValue());
+        Assert.assertEquals("hops", result.get("24974").getCriteria().toLowerCase());
 
     }
 }

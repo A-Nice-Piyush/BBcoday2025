@@ -2,7 +2,9 @@ package com.nice.avishkar.model;
 
 import com.opencsv.bean.CsvBindByName;
 
-//Map<this.Source, List<this>>
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+
 public class Route {
     @CsvBindByName(column = "Source")
     String source;
@@ -18,27 +20,24 @@ public class Route {
     String arrivalTime;
     @CsvBindByName(column = "Cost")
     Integer cost;
+
+    long totalTimeForTravel;
+
+    long hops;
     
     public Route()
     {
 
     }
 
-    public Route(String source, String destination, String mode, String departureTime, String arrivalTime) {
-        this.source = source;
-        this.destination = destination;
-        this.mode = mode;
-        this.arrivalTime = arrivalTime;
-        this.departureTime = departureTime;
-    }
-
-    public Route(String source, String destination, String mode, String departureTime, String arrivalTime, Integer cost) {
+    public Route(String source, String destination, String mode, String departureTime, String arrivalTime, Integer cost, Long hops) {
         this.source = source;
         this.destination = destination;
         this.mode = mode;
         this.arrivalTime = arrivalTime;
         this.departureTime = departureTime;
         this.cost = cost;
+        this.hops = hops;
     }
 
     public String getSource() {
@@ -87,6 +86,34 @@ public class Route {
 
     public void setCost(Integer cost) {
         this.cost = cost;
+    }
+
+    public long getTotalTimeForTravel()
+    {
+        if(totalTimeForTravel == 0l)
+        {
+            LocalTime t1 = LocalTime.parse(this.departureTime);
+            LocalTime t2 = LocalTime.parse(this.arrivalTime);
+
+            // Calculate the difference in minutes
+            long differenceInMinutes = ChronoUnit.MINUTES.between(t1, t2);
+            return differenceInMinutes;
+        }
+
+        return totalTimeForTravel;
+    }
+
+    public void setTotalTimeForTravel(long totalTimeForTravel)
+    {
+        this.totalTimeForTravel = totalTimeForTravel;
+    }
+
+    public long getHops() {
+        return hops;
+    }
+
+    public void setHops(long hops) {
+        this.hops = hops;
     }
 
     @Override
