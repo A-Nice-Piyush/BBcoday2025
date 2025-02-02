@@ -32,7 +32,7 @@ public class TravelOptimizerTest {
 
         Assert.assertNotNull(result);
 
-       /* Assert.assertEquals(90, result.get("1").getValue());
+        /*Assert.assertEquals(90, result.get("1").getValue());
         Assert.assertEquals("time", result.get("1").getCriteria().toLowerCase());*/
 
         Assert.assertEquals(0, result.get("2").getValue());

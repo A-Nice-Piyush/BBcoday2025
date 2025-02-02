@@ -27,4 +27,16 @@ public class Graph {
             System.out.println("Node " + entry.getKey() + " has edges: " + entry.getValue());
         }
     }
+
+    // Get a specific route from the source to the destination
+    public Route getRoute(String source, String destination) {
+        // Find the route from the adjacency list
+        for (Route route : adjacencyList.getOrDefault(source, new ArrayList<>())) {
+            if (route.getDestination().equals(destination)) {
+                return route;
+            }
+        }
+        return null; // No route found between source and destination
+    }
+
 }
