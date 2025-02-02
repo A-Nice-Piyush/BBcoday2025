@@ -32,6 +32,15 @@ public class Route {
         this.departureTime = departureTime;
     }
 
+    public Route(String source, String destination, String mode, String departureTime, String arrivalTime, Integer cost) {
+        this.source = source;
+        this.destination = destination;
+        this.mode = mode;
+        this.arrivalTime = arrivalTime;
+        this.departureTime = departureTime;
+        this.cost = cost;
+    }
+
     public String getSource() {
         return source;
     }
